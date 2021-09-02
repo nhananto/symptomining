@@ -1,0 +1,7 @@
+.vscode
+.idea
+__pycache__
+work_env
+db.sqlite3
+media
+staticfiles
