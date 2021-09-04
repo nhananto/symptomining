@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %} {% load static %} {% block meta %}
+<title>Home | Symptomining</title>
+{% endblock %} {% block body %}
+
+    <nav class="navbar navbar-expand navbar-light bg-primary">
+        <div class="ml-5 mt-2 mb-2">
+            <img style="margin-left: 450px;" src="{% static 'main/img/logo.png' %}" alt="logo" height="50px" >
+             
+        </div>
+        <b style="color:white;" class="ml-1 ">Symtomining</b>
+        <div class="container-fluid  py-2">
+            <div class="align-self-center ml-auto">
+                <ul class="navbar-nav  mr-5" >
+                    <li class="nav-item align-self-center">
+                        <a href="#"><span style="color:white;">Covid-19</span></a>
+                    </li>
+                    <li class="nav-item align-self-center">
+                        <button style="margin-right: 450px;">Start Checkup</button>
+                    </li>            
+                </ul>
+            </div>        
+                       
+                    
+        </div>
+        
+        
+  
+
+</nav>
+
+<div class="wrapper pt-5">
+    <div class="container">
+        <!-- body(Banner) -->
+        
+        
+    </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{% static 'main/js/argon-design-system.min.js' %}"></script>
+{% endblock %}
