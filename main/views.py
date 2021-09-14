@@ -5,3 +5,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'main/index.html')
+
+def checkup(request):
+    return render(request, 'main/checkup.html')

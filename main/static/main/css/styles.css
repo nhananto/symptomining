@@ -1,7 +1,9 @@
-
+/* ****************home**************** */
 .body
 {
   background-color: #F0FAFB;
+  font-family: 'Roboto', sans-serif;
+
 }
   .right.navbar-nav
   {
@@ -18,21 +20,45 @@
     width: auto;
     left: 35%;
 }
+
 .button-nav{
    
     margin-top: 2px;
 }
-button {
-    border: 1px solid #a1a1a1;
-    padding: 5px 10px; 
-    background: #dddddd;
-    border-radius: 10px;
-    box-shadow: 0 0 5px red;
- }
- button:hover{
-     background-color: rgb(186, 196, 194);
- }
 
+.button1 {
+  padding: 5px 10px !important;
+  border: 2px solid #a1a1a1 !important;
+  font-size: 15px !important;
+  background-color: #dddddd !important;
+  color: black !important;
+  border-radius: 5px;
+  transition: 0.2s all;
+  outline: none;
+}
+
+.button1:active {
+  transform: scale(0.98);  
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.button2 {
+  border: none;
+  padding: 7px 14px !important;
+  font-size: 16px;
+  background-color: #dddddd !important;
+  color: black !important;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  transition: 0.2s all;
+  outline: none;
+  font-weight:900;
+}
+
+.button2:active {
+  transform: scale(0.98);  
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
 
 
   .container {
@@ -43,12 +69,11 @@ button {
   .container .T1 {
     position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  font-size: 17px !important;
   color: #f1f1f1;
   width: 97.5%;
   padding: 100px;
   }
 
-      /* F0FAFB */
+/* *************Checkup*************** */
       
