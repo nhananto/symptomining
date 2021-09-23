@@ -4,7 +4,7 @@
   background-color: #F0FAFB;
   font-family: 'Roboto', sans-serif;
 
-}
+} 
   .right.navbar-nav
   {
     position: absolute;
@@ -63,9 +63,12 @@
 
   .container {
     position: relative;
-  margin: 0 auto;
+    margin: 0 auto;
   }
-  .container img {vertical-align: middle;} 
+  .container img {
+    vertical-align: middle;
+    width: 1130px !important;
+    margin-left: -10px;} 
   .container .T1 {
     position: absolute;
   bottom: 0;
