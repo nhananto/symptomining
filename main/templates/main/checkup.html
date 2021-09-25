@@ -5,50 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="colorlib.com">
+    <meta name="author" content="colorlib.com">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>CheckUp | Symptomining</title>
+    <title>CheckUp | Symptomining</title>
 
-<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
-<link rel="stylesheet" href="{% static 'main/vendor/nouislider/nouislider.min.css' %}">
-<link rel="stylesheet" href="{% static 'main/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/vendor/nouislider/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/fonts/material-icon/css/material-design-iconic-font.min.css' %}">   
 </head>
 
 <body>
-
-  <nav class=" navbar navbar-expand-md navbar-light justify-content-center" style="background-color:#2493a1;">
-    <div class="navbar-collapse collapse" id="collapsingNavbar">
-        <ul class="navbar-nav" style="margin-left:400px;">
-            <a href="{% url 'home' %}" style="text-decoration: none;">
-             <img style="margin-left: 50px;" src="{% static 'main/img/logo.png' %}" alt="logo" height="50px" > 
-             <b style="color:white; margin-top:12px; margin-left:5px;" >Symtomining</b>
-           </a>
-           <span style="margin-left: 40%;">
-            <li class="nav-item">
-                <a style="color: white; " class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
-            </li>
-            <li class="nav-item button-nav ml-4">
-           <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
-                </li>
-        </span>
-           
-        </ul>
-    </div>
-</nav> 
-
-
-
-
-
+    {% include 'main/navbar.html'%}
     <div class="main">
-
         <div class="container">
             <form method="POST" id="signup-form" class="signup-form" action="#">
                 <div>
                     <h3>Personal info</h3>
                     <fieldset>
                         <h2>Personal information</h2>
-                        <p class="desc">Please enter your infomation and proceed to next step so we can build your account</p>
+                        <p class="desc">Please enter your infomation and proceed to next step so we can build your
+                            account</p>
                         <div class="fieldset-content">
                             <div class="form-row">
                                 <label class="form-label">Name</label>
@@ -66,7 +42,7 @@
                             <div class="form-group">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" name="email" id="email" />
-                                <span class="text-input">Example  :<span>  Jeff@gmail.com</span></span>
+                                <span class="text-input">Example :<span> Jeff@gmail.com</span></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="form-label">Phone</label>
@@ -99,7 +75,8 @@
                     <h3>Connect Bank Account</h3>
                     <fieldset>
                         <h2>Connect Bank Account</h2>
-                        <p class="desc">Please enter your infomation and proceed to next step so we can build your account</p>
+                        <p class="desc">Please enter your infomation and proceed to next step so we can build your
+                            account</p>
                         <div class="fieldset-content">
                             <div class="form-group">
                                 <label for="find_bank" class="form-label">Find Your Bank</label>
@@ -178,6 +155,8 @@
         </div>
 
     </div>
+
+    {% include 'main/partials/footer.html' %}
     <script src="{% static 'main/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'main/vendor/jquery-validation/dist/jquery.validate.min.js' %}"></script>
     <script src="{% static 'main/vendor/jquery-validation/dist/additional-methods.min.js' %}"></script>
@@ -187,4 +166,5 @@
     <script src="{% static 'main/vendor/wnumb/wNumb.js' %}"></script>
     <script src="{% static 'main/js/core/main.js' %}"></script>
 </body>
+
 </html>

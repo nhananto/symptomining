@@ -11,8 +11,7 @@
 </head>
 
 <body>
- {% include 'main/navbar.html'%}
-    {% block body %} {% endblock %} {% include 'main/partials/footer.html' %} {% include 'main/partials/scripts.html' %} {% block scripts %} {% endblock %}
+    {% block body %} {% include 'main/partials/scripts.html'%} {% endblock %} {% block scripts %} {% endblock %}
 </body>
 
 </html>

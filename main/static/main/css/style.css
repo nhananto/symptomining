@@ -569,12 +569,33 @@ input.error {
 
 /* navbar */
 
-.navbar{
-  position:relative;
+ .navbar{
+  position:relative; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 65px;
+  margin-top: -16px;
+}
+
+.navbar .left{
+margin-left: 23%;
+}
+.navbar .left img{
+  margin-bottom: -18px;
+} 
+.navbar .right{
+  margin-left: 32%;
+  /* margin-bottom: 10px; */
+}
+.navbar a{
+  text-decoration: none;
+  font-weight: 700;
+  height: 50px;
+  line-height: 35px;
 }
 
  .button1 {
-padding: 5px 10px !important;
+padding: 7px 10px !important;
 border: 2px solid #a1a1a1 !important;
 font-size: 15px !important;
 background-color: #dddddd !important;
@@ -582,7 +603,7 @@ color: black !important;
 border-radius: 5px;
 transition: 0.2s all;
 outline: none;
-margin-top: 0px !important;
+margin-top: 2px !important;
 }
 
 .button1:active {
@@ -590,10 +611,15 @@ transform: scale(0.98);
 box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 } 
 
-ul li{
+.navbar li{
   list-style: none;
-  display: inline-block;  
-}
+  display: inline-block; 
+  margin-right: 10px;
+} 
+
+
+
+
 
 
 

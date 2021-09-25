@@ -1,28 +1,65 @@
-<footer class="footer has-cards">
-    <div class="container">
-        <hr>
-        <div class="row align-items-center justify-content-md-between">
-            <div class="col-md-6">
-                <div class="copyright">
-                    &copy; 2021 <a href="#">Symptominig</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}"> -->
+</head>
+<style>
+    .footer .container{
+        background-color: #F0FAFB !important;
+        border: 0px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+    .footer a{
+        text-decoration: none;
+        /* color: #0056B3; */
+        color:#007bff;
+    }
+    .footer a:hover{
+        color: #0056b3;
+    }
+    .footer li{
+        list-style: none;
+        display: inline-block; 
+        margin-right: 10px;
+    } 
+    .footer .left{
+        margin-left: 65%;
+    }
+</style>
+<body>
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <div class="row align-items-center justify-content-md-between">
+                <div>                    
+                    <ul class="nav nav-footer justify-content-end ">
+                        <li>
+                            &copy; 2021 <a href="#">Symptominig</a>
+                        </li>
+                        <span class="left">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">Our Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="/" class="nav-link">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">License</a>
+                            </li>
+                        </span>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-6 ">
-                <ul class="nav nav-footer justify-content-end ">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">Our Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="/" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">License</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </div>
-</footer>
+    </footer> 
+</body>
+</html>
