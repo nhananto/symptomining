@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="colorlib.com">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'main/img/icons/favicon.ico' %}" type="image/x-icon" />
     <title>CheckUp | Symptomining</title>
 
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'main/vendor/nouislider/nouislider.min.css' %}">
-    <link rel="stylesheet" href="{% static 'main/fonts/material-icon/css/material-design-iconic-font.min.css' %}">   
+    <link rel="stylesheet" href="{% static 'main/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
 </head>
 
 <body>
@@ -20,135 +21,158 @@
         <div class="container">
             <form method="POST" id="signup-form" class="signup-form" action="#">
                 <div>
+                    
+                    <h3>Introduction</h3>
+                    <fieldset>
+                        <center><h2>Introduction</h2></center>
+                        <img class="hello" src="{% static 'main/img/hello.png' %}" alt="hello">
+                        <p class="desc" style="margin-top: 150px;">Hello!!!</p>
+                        <p class="texthello">You’re about to use a short (3 min), safe and anonymous health checkup. Your answers will be carefully analyzed and you’ll learn about possible causes of your symptoms. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur impedit veritatis consequatur nulla aliquam, ab commodi nam repellat, unde excepturi mollitia. Eaque animi aspernatur in atque dolore fugit, ad quo modi mollitia sapiente sed et fugiat delectus nostrum doloribus molestiae reiciendis excepturi culpa voluptatem magni necessitatibus tenetur laborum. Doloremque at maxime veniam, repellendus, suscipit vitae eos quos a ut blanditiis dolore modi, inventore dicta molestiae voluptatibus? Sapiente perspiciatis non, eveniet est voluptate quas sint dicta aspernatur excepturi cumque magni blanditiis eum fugiat veritatis ducimus quisquam provident, recusandae sed deserunt soluta? Nemo exercitationem, fuga corporis cumque culpa libero tempore maxime officia, nam dicta illum iste eveniet magni itaque molestias vel praesentium, ipsum harum cum dignissimos doloribus. Voluptatem iste nihil officiis similique repudiandae praesentium consequatur earum adipisci, quam commodi, quo soluta aspernatur, nulla incidunt corporis maiores natus tenetur ullam. Eum harum obcaecati asperiores itaque facilis totam, fuga iusto, tempore minus, sunt porro.</p>
+                    </fieldset>
                     <h3>Personal info</h3>
                     <fieldset>
-                        <h2>Personal information</h2>
-                        <p class="desc">Please enter your infomation and proceed to next step so we can build your
-                            account</p>
-                        <div class="fieldset-content">
-                            <div class="form-row">
-                                <label class="form-label">Name</label>
-                                <div class="form-flex">
-                                    <div class="form-group">
-                                        <input type="text" name="first_name" id="first_name" />
-                                        <span class="text-input">First</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="last_name" id="last_name" />
-                                        <span class="text-input">Last</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" id="email" />
-                                <span class="text-input">Example :<span> Jeff@gmail.com</span></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="text" name="phone" id="phone" />
-                            </div>
-                            <div class="form-date">
-                                <label for="birth_date" class="form-label">Birth Date</label>
-                                <div class="form-date-group">
-                                    <div class="form-date-item">
-                                        <select id="birth_month" name="birth_month"></select>
-                                        <span class="text-input">MM</span>
-                                    </div>
-                                    <div class="form-date-item">
-                                        <select id="birth_date" name="birth_date"></select>
-                                        <span class="text-input">DD</span>
-                                    </div>
-                                    <div class="form-date-item">
-                                        <select id="birth_year" name="birth_year"></select>
-                                        <span class="text-input">YYYY</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="ssn" class="form-label">SSN</label>
-                                <input type="text" name="ssn" id="ssn" />
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <h3>Connect Bank Account</h3>
-                    <fieldset>
-                        <h2>Connect Bank Account</h2>
-                        <p class="desc">Please enter your infomation and proceed to next step so we can build your
-                            account</p>
-                        <div class="fieldset-content">
-                            <div class="form-group">
-                                <label for="find_bank" class="form-label">Find Your Bank</label>
-                                <div class="form-find">
-                                    <input type="text" name="find_bank" id="find_bank" placeholder="Ex. Techcombank" />
-                                    <input type="submit" value="Search" class="submit">
-                                    <span class="form-icon"><i class="zmdi zmdi-search"></i></span>
-                                </div>
-                            </div>
-                            <div class="choose-bank">
-                                <p class="choose-bank-desc">Or choose from these popular bank</p>
-                                <div class="form-radio-flex">
-                                    <!-- <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_1" value="bank_1" checked="checked" />
-                                        <label for="bank_1"><img src="images/bank-1.jpg" alt=""></label>
-                                    </div>
-
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_2" value="bank_2" />
-                                        <label for="bank_2"><img src="images/bank-2.jpg" alt=""></label>
-                                    </div>
-
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_3" value="bank_3" />
-                                        <label for="bank_3"><img src="images/bank-3.jpg" alt=""></label>
-                                    </div>
-
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_4" value="bank_4" />
-                                        <label for="bank_4"><img src="images/bank-4.jpg" alt=""></label>
-                                    </div>
-
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_5" value="bank_5" />
-                                        <label for="bank_5"><img src="images/bank-5.jpg" alt=""></label>
-                                    </div>
-
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_6" value="bank_6" />
-                                        <label for="bank_6"><img src="images/bank-6.jpg" alt=""></label>
-                                    </div>
-                                    
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_7" value="bank_7" />
-                                        <label for="bank_7"><img src="images/bank-7.jpg" alt=""></label>
-                                    </div>
-
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="choose_bank" id="bank_8" value="bank_8" />
-                                        <label for="bank_8"><img src="images/bank-8.jpg" alt=""></label>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <h3>Set Financial Goals</h3>
-                    <fieldset>
-                        <h2>Set Financial Goals</h2>
-                        <p class="desc">Set up your money limit to reach the future plan</p>
+                        <form action="/">
+                            <center><h2>Patient Information</h2></center>
+                        <p class="desc2" style="margin-bottom: -40px;">How old is the patient?</p>
                         <div class="fieldset-content">
                             <div class="donate-us">
                                 <div class="price_slider ui-slider ui-slider-horizontal">
                                     <div id="slider-margin"></div>
-                                    <p class="your-money">
-                                        Your money you can spend per month :
+                                    <p class="age">
+                                        Age : &nbsp;
                                         <span class="money" id="value-lower"></span>
                                         <span class="money" id="value-upper"></span>
                                     </p>
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <hr>
+                        <div class="fieldset-content">
+                            <p class="desc2" style="margin-top: 30px;">What is your sex?</p>
+                            <div class="radio">
+                                <input class="a"  type="radio" id="male" name="contact" value="male">
+                                <label for="male">Male</label>
+                                <input class="b" type="radio" id="female" name="contact" value="female">
+                                <label for="female">Female</label>
+                            </div>
+
+                             <p class="desc2" style="margin-top: 50px;">Are you a front liner?</p>
+                            <div class="radio">
+                                 
+                                <input class="a"  type="radio" id="male" name="contact" value="male">
+                                <label for="male">Yes</label>
+                                <input class="b" type="radio" id="female" name="contact" value="female">
+                                <label for="female">No</label>
+                            </div>
+                        </div>
+                        </form>
+                    </fieldset>
+
+                    <h3>Patient History</h3>
+                    <fieldset>
+                        <center>
+                            <h2>Patient History</h2>
+                        </center>
+                        <p class="desc"  style="margin-top: 100px; margin-bottom: 40px;">Please select Yes/No for the following questions</p>
+                        <div class="fieldset-content">
+                    
+                            <p class="desc2">Did you travel outside of your city in the last few weeks?</p>
+                            <input class="a" type="radio" id="1" name="contact" value="11">
+                            <label for="1">Yes</label>
+                            <input class="b" type="radio" id="2" name="contact" value="12">
+                            <label for="2">No</label>
+                    
+                            <p class="desc2">Did you visit a crowded place?</p>
+                            <input class="a" type="radio" id="3" name="contact" value="13">
+                            <label for="3">Yes</label>
+                            <input class="b" type="radio" id="4" name="contact" value="14">
+                            <label for="4">No</label>
+                    
+                            <p class="desc2">Do you have comorbidity? (one disease for another disease)</p>
+                            <input class="a" type="radio" id="5" name="contact" value="15">
+                            <label for="5">Yes</label>
+                            <input class="b" type="radio" id="6" name="contact" value="16">
+                            <label for="6">No</label>
+                    
+                            <p class="desc2">Did you meet any COVID-19 infected patients in the last few weeks?</p>
+                            <input class="a" type="radio" id="7" name="contact" value="17">
+                            <label for="7">Yes</label>
+                            <input class="b" type="radio" id="8" name="contact" value="18">
+                            <label for="8">No</label>
+                        
+                        </div>
+                    </fieldset>
+
+                    <h3>Symptoms</h3>
+                    <fieldset>
+                        <center>
+                            <h2>Symptoms</h2>
+                        </center>
+                        <p class="desc" style="margin-top: 80px; margin-bottom: 20px;">Do you have any of the following symptoms?</p>
+                        <div class="checkbox">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1" class="checktext"> Fever</label><br>
+
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2" class="checktext"> Dry Cough</label><br>
+
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3" class="checktext"> Sore Throat</label><br>
+
+                        <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
+                        <label for="vehicle4" class="checktext"> Diarrhea</label><br>
+                        
+                        <input type="checkbox" id="vehicle5" name="vehicle5" value="Boat">
+                        <label for="vehicle5" class="checktext"> Tiredness</label><br>
+
+                        <input type="checkbox" id="vehicle6" name="vehicle6" value="Boat">
+                        <label for="vehicle6" class="checktext"> Headache</label><br>
+
+                        <input type="checkbox" id="vehicle7" name="vehicle7" value="Boat">
+                        <label for="vehicle7" class="checktext"> Muscle Pain</label><br>
+
+                        <input type="checkbox" id="vehicle8" name="vehicle8" value="Boat">
+                        <label for="vehicle8" class="checktext"> Rash on Skin</label><br>
+                        
+                        <input type="checkbox" id="vehicle9" name="vehicle9" value="Boat">
+                        <label for="vehicle9" class="checktext"> Chest Pain</label><br>
+
+                        <input type="checkbox" id="vehicle10" name="vehicle10" value="Boat">
+                        <label for="vehicle10" class="checktext"> Shortness of Breath</label><br>
+                        
+                        <input type="checkbox" id="vehicle11" name="vehicle11" value="Boat">
+                        <label for="vehicle11" class="checktext"> Loss of Taste or Smell</label><br>
+                        
+                        <input type="checkbox" id="vehicle12" name="vehicle12" value="Boat">
+                        <label for="vehicle12" class="checktext"> Loss of Speech or Movement</label><br>
+
+                        <input type="checkbox" id="vehicle13" name="vehicle13" value="Boat">
+                        <label for="vehicle13" class="checktext"> Oxygen Saturation(Lower than 92%)</label><br>
+                        </div>
+                        
+                    
+                    </fieldset>
+                    <h3>Patient Test</h3>
+                    <fieldset>
+                        <center>
+                            <h2>Patient Test</h2>
+                        </center>
+                        
+                        <p class="desc2">Do you feel difficult to complete a short sentence in one breath?</p>
+                        <input class="a" type="radio" id="3" name="contact" value="13">
+                        <label for="3">Yes</label>
+                        <input class="b" type="radio" id="4" name="contact" value="14">
+                        <label for="4">No</label>
+
+                        <p class="desc2">Any of these symptoms manifested through someone in your family?</p>
+                        <input class="a" type="radio" id="3" name="contact" value="13">
+                        <label for="3">Yes</label>
+                        <input class="b" type="radio" id="4" name="contact" value="14">
+                        <label for="4">No</label>
+
+                        <p class="desc2">If you want to add any more symptom, please write down here.</p>
+                        <textarea class="desctext" placeholder="Enter your text here..." name="" id="" cols="30" rows="10"></textarea>
                     </fieldset>
                 </div>
             </form>

@@ -7,11 +7,6 @@
         errorPlacement: function errorPlacement(error, element) {
             element.before(error);
         },
-        rules: {
-            email: {
-                email: true
-            }
-        },
         onfocusout: function(element) {
             $(element).valid();
         },
@@ -41,9 +36,9 @@
             if (currentIndex === 3) {
                 form.parent().parent().parent().find('.footer').removeClass('footer-2').addClass('footer-' + currentIndex + '');
             }
-            // if(currentIndex === 4) {
-            //     form.parent().parent().parent().append('<div class="footer" style="height:752px;"></div>');
-            // }
+            if(currentIndex === 4) {
+                form.parent().parent().parent().find('.footer').removeClass('footer-3').addClass('footer-' + currentIndex + '');
+            }
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
@@ -86,23 +81,19 @@
     var marginSlider = document.getElementById('slider-margin');
     if (marginSlider != undefined) {
         noUiSlider.create(marginSlider, {
-              start: [1100],
-              step: 100,
+              start: [1],
+              step: 1,
               connect: [true, false],
               tooltips: [true],
               range: {
-                  'min': 100,
-                  'max': 2000
+                  'min': 1,
+                  'max': 120
               },
-              pips: {
-                    mode: 'values',
-                    values: [100, 2000],
-                    density: 4
-                    },
+              
                 format: wNumb({
                     decimals: 0,
                     thousand: '',
-                    prefix: '$ ',
+                    prefix: ' ',
                 })
         });
         var marginMin = document.getElementById('value-lower'),
