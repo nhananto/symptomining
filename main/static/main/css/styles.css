@@ -1,7 +1,7 @@
 /* ****************home**************** */
 .body
 {
-  background-color: #F0FAFB;
+  background-color: #F0FAFB !important;
   font-family: 'Roboto', sans-serif;
 
 } 
@@ -79,5 +79,20 @@
   padding: 100px;
   }
 
-/* *************Checkup*************** */
-      
+/* *************jumbotron*************** */
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-top:3rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+
+background: #000064;  /* old browsers fallback color*/
+background: -webkit-linear-gradient(to right, #326D83, #015B81);  
+background: linear-gradient(to right, #326D83, #015B81); 
+
+
+}
+.hd1{
+    color:#fff;
+    text-align: center;
+}  

@@ -178,27 +178,24 @@ p.desc2 {
   .radio .a{
   width: 5%;
   display: inline-block;
+  cursor: pointer;
   color: #222;
   font-size: 18px;
   font-family: 'Roboto Slab';
-  }
-  .radio .b{
-  width: 5%;
-  display: inline-block;
-  color: #222;
-  font-size: 18px;
-  font-family: 'Roboto Slab';
-  }
-  .radio label{
-    font-size: 18px;
   }
 
-  .checkbox label{
-    font-size: 16px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: #555;
-  }
+  .radio .b{
+    width: 5%;
+    display: inline-block;
+    cursor: pointer;
+    color: #222;
+    font-size: 18px;
+    font-family: 'Roboto Slab';
+    }
+
+
+
+
 
 #steps-uid-0-p-0 .form-row, #steps-uid-0-p-0 .form-group, #steps-uid-0-p-0 .form-date {
   width: 680px; }
@@ -660,3 +657,4 @@ box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   display: inline-block; 
   margin-right: 10px;
 }
+

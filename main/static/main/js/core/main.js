@@ -39,6 +39,9 @@
             if(currentIndex === 4) {
                 form.parent().parent().parent().find('.footer').removeClass('footer-3').addClass('footer-' + currentIndex + '');
             }
+            if(currentIndex === 5) {
+                form.parent().parent().parent().find('.footer').removeClass('footer-3').addClass('footer-' + currentIndex + '');
+            }
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
@@ -47,7 +50,7 @@
             return form.valid();
         },
         onFinished: function(event, currentIndex) {
-            alert('Submited');
+            window.location.href = "/result/";
         },
         onStepChanged: function(event, currentIndex, priorIndex) {
 
@@ -67,17 +70,7 @@
         creditcard: "",
         equalTo: ""
     });
-
-    $.dobPicker({
-        daySelector: '#birth_date',
-        monthSelector: '#birth_month',
-        yearSelector: '#birth_year',
-        dayDefault: '',
-        monthDefault: '',
-        yearDefault: '',
-        minimumAge: 0,
-        maximumAge: 120
-    });
+    
     var marginSlider = document.getElementById('slider-margin');
     if (marginSlider != undefined) {
         noUiSlider.create(marginSlider, {

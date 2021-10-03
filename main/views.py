@@ -8,3 +8,6 @@ def home(request):
 
 def checkup(request):
     return render(request, 'main/checkup.html')
+
+def result(request):
+    return render(request, 'main/result.html')
