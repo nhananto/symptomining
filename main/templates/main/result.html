@@ -6,7 +6,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-md navbar-light justify-content-center" style="background-color:#2493a1;">
+    <nav class="navbar navbar-expand-md navbar-light justify-content-center" style="background-color:#2493a1; font-family: 'Roboto', sans-serif;">
         <div class="navbar-collapse collapse">
             <ul class="navbar-nav" style="margin-left:400px;">
                 <a href="{% url 'home' %}" style="text-decoration: none;">
@@ -17,13 +17,10 @@
             </ul>
             <ul class="right navbar-nav">
                 <li class="nav-item">
-                    <a style="color: white; margin-right: 10px;" class="nav-link" href="" data-target="#myModal"
-                        data-toggle="modal">About</a>
+                    <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'about' %}" >About</a>
                 </li>
                 <li class="nav-item button-nav ml-4">
                     <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
-
-                    <!-- <input type="button" value="Start Checkup" /> -->
                 </li>
             </ul>
         </div>
@@ -31,23 +28,120 @@
 
 
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="hd1">Custom Jumbotron!</h1>
-            <p class="lead hd1">Using the gradient background for Jumbotron component</p>
-            <hr class="my-4">
-            <p class="hd1">Convey and get attention.</p>
-
+        <div class="jmb1">
+            <div class="jumbotron">
+                <h2 class="hd1">Result</h2>
+                <p class="lead hd1">Your COVID-19 test result is <b>Negative</b></p>
+                <hr class="my-4">
+                <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
+                    intended to replace professional medical advice. Please contact nearby hospitals to get proper
+                    medication.</p>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="hd1">Custom Jumbotron!</h1>
-            <p class="lead hd1">Using the gradient background for Jumbotron component</p>
-            <hr class="my-4">
-            <p class="hd1">Convey and get attention.</p>
-
+        <div class="jmb2">
+            <div class="jumbotron">
+                <h2 class="hd1">Recommendation</h2>
+                <p class="lead hd1">Your answers point that you have no similarity with COVID-19 symptoms. Follow the
+                    recommendation below and consult your health provider for diagnosis.</p>
+                <hr class="my-4">
+                <p class="hd1">As your result is negative, so you don't need to worry that much. Still you are feeling
+                    sick, please consult with a doctor for a regular checkup.</p>
+            </div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="jmb3">
+            <div class="jumbotron">
+                <h2 class="hd1">Summary</h2>
+                <p class="lead hd1">Your Answers</p>
+                <a href="#"><button class="btn button1" style="margin-left: 400px;" data-toggle="modal"
+                        data-target="#exampleModalCenter">Show</button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div style="font-size: 15px; line-height: 1.4; font-family: 'Roboto', sans-serif;" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Answers</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Information</h6>
+                    <span class="ml-4">Age:&nbsp; 40</span>
+                    <span class="ml-5">Sex:&nbsp; Female</span>
+                    <span class="ml-5">Front-liner:&nbsp; Yes</span>
+
+                    <hr>
+                    <h6>History</h6>
+                    <ul>
+                        <li>Travel outside:&nbsp; No</li>
+                    <li>Visit a crowded place:&nbsp; Yes</li>
+                    <li>Comorbidity:&nbsp; No</li>
+                    <li>Meet any COVID-19 infected patients:&nbsp; Yes</li>
+                    </ul>
+                    
+
+                    <hr>
+                    <h6>Symptoms</h6>
+                    <ul>
+                    <li>Fever</li>
+                    <li>Dry Cough</li>
+                    <li>Sore Throat</li>
+                    <li>Diarrhea</li>
+                    <li>Tiredness</li>
+                    <li>Headache</li>
+                    <li>Muscle Pain</li>
+                    <li>Rash on Skin</li>
+                    <li>Chest Pain</li>
+                    <li>Shortness of Breath</li>
+                    <li>Loss of Taste or Smell</li>
+                    <li>Loss of Speech or Movement</li>
+                    <li>Oxygen Saturation(Lower than 92%)</li>
+                    </ul>
+                    <hr>
+                    <h6>Test</h6>
+                    <ul>
+                        <li>Difficult to complete a short sentence: &nbsp; Yes</li>
+                        <li>Symptoms manifested through someone in your family:&nbsp; Yes</li>
+                        <li>Difficult to complete a short sentence symptoms manifested through someone in your family</li>                        
+
+
+
+                    </ul>
+                  
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn button1" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="animation-area">
+        <ul class="box-area">
+            <li><img style="width:50px;height:50px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+            <li><img style="width:65px;height:65px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+            <li><img style="width:70px;height:70px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+            <li><img style="width:85px;height:85px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+            <li><img style="width:90px;height:90px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+            <li><img style="width:45px;height:45px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+        </ul>
     </div>
 
     <footer class="footer has-cards">
@@ -78,5 +172,10 @@
             </div>
         </div>
     </footer>
+
+
+
+    {% include 'main/partials/scripts.html' %}
+
 
 </body>

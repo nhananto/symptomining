@@ -11,3 +11,6 @@ def checkup(request):
 
 def result(request):
     return render(request, 'main/result.html')
+
+def about(request):
+    return render(request, 'main/about.html')

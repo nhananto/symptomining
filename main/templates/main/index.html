@@ -15,7 +15,7 @@
         </ul>
         <ul class="right navbar-nav" >
             <li class="nav-item">
-                <a style="color: white; margin-right: 10px;" class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+                <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'about' %}" data-target="#myModal" data-toggle="modal">About</a>
             </li>
             <li class="nav-item button-nav ml-4">
            <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
@@ -63,6 +63,23 @@
 
         </div>
     </div>
+
+
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li><img style="width:50px;height:50px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+        <li><img style="width:65px;height:65px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+        <li><img style="width:70px;height:70px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+        <li><img style="width:85px;height:85px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+        <li><img style="width:90px;height:90px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+        <li><img style="width:45px;height:45px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+    </ul>
+</div> 
+
+
+
+
     <footer class="footer has-cards">
     <div class="container">
         <hr>

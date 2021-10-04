@@ -1,0 +1,66 @@
+{% load static %}
+{% include 'main/partials/meta.html' %}
+{% include 'main/partials/styles.html' %}
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light justify-content-center" style="background-color:#2493a1; font-family: 'Roboto', sans-serif;">
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav" style="margin-left:400px;">
+                <a href="{% url 'home' %}" style="text-decoration: none;">
+                    <img style="margin-left: 50px; margin-top: -5px;" src="{% static 'main/img/logo.png' %}" alt="logo"
+                        height="50px">
+                    <b style="color:white; margin-top:12px; margin-left:5px;">Symtomining</b>
+                </a>
+            </ul>
+            <ul class="right navbar-nav">
+                <li class="nav-item">
+                    <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'about' %}" data-target="#myModal"
+                        data-toggle="modal">About</a>
+                </li>
+                <li class="nav-item button-nav ml-4">
+                    <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="animation-area">
+        <ul class="box-area">
+            <li><img style="width:50px;height:50px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+            <li><img style="width:65px;height:65px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+            <li><img style="width:70px;height:70px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+            <li><img style="width:85px;height:85px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+            <li><img style="width:90px;height:90px; opacity: 25%;" src="{% static 'main/img/logo.png' %}" alt=""></li>
+            <li><img style="width:45px;height:45px; opacity: 18%;" src="{% static 'main/img/logo2.png' %}" alt=""></li>
+        </ul>
+    </div>
+
+    <footer class="footer has-cards">
+        <div class="container">
+            <hr>
+            <div class="row align-items-center justify-content-md-between">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        &copy; 2021 <a href="#" style="text-decoration: none;">Symptominig</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-footer justify-content-end">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
