@@ -49,9 +49,15 @@
             form.validate().settings.ignore = ":disabled";
             return form.valid();
         },
-        onFinished: function(event, currentIndex) {
-            window.location.href = "/result/";
+        //onFinished: function(event, currentIndex) {
+            // window.location.href = "/result/";
+            // alert('Submited');
+        //},
+
+        onFinished: function (event, currentIndex) {
+            form.submit();
         },
+
         onStepChanged: function(event, currentIndex, priorIndex) {
 
             return true;
@@ -71,33 +77,36 @@
         equalTo: ""
     });
     
-    var marginSlider = document.getElementById('slider-margin');
-    if (marginSlider != undefined) {
-        noUiSlider.create(marginSlider, {
-              start: [1],
-              step: 1,
-              connect: [true, false],
-              tooltips: [true],
-              range: {
-                  'min': 1,
-                  'max': 120
-              },
+    // var marginSlider = document.getElementById('slider-margin');
+    // if (marginSlider != undefined) {
+    //     noUiSlider.create(marginSlider, {
+    //           start: [1],
+    //           step: 1,
+    //           connect: [true, false],
+    //           tooltips: [true],
+    //           range: {
+    //               'min': 1,
+    //               'max': 120
+    //           },
               
-                format: wNumb({
-                    decimals: 0,
-                    thousand: '',
-                    prefix: ' ',
-                })
-        });
-        var marginMin = document.getElementById('value-lower'),
-	    marginMax = document.getElementById('value-upper');
-
-        marginSlider.noUiSlider.on('update', function ( values, handle ) {
-            if ( handle ) {
-                marginMax.innerHTML = values[handle];
-            } else {
-                marginMin.innerHTML = values[handle];
-            }
-        });
-    }
+    //             format: wNumb({
+    //                 decimals: 0,
+    //             })
+    //     });
+    //      var marginMin = document.getElementByName('age');
+    //     marginSlider.noUiSlider.on('update', function (values, handle) {
+    //         if (handle) {
+    //             marginMax.innerHTML = values[handle];
+    //         } else {
+    //             marginMin.innerHTML = values[handle];
+    //         }
+    //     });       
+    // }
+    const sliders = document.querySelectorAll(".web");
+            sliders.forEach(python => { 
+                python.addEventListener('input', ()=>{
+                    python.lastElementChild.innerHTML = python.firstElementChild.value;
+})
+        
+})
 })(jQuery);

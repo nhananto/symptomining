@@ -14,12 +14,34 @@
     <link rel="stylesheet" href="{% static 'main/vendor/nouislider/nouislider.min.css' %}">
     <link rel="stylesheet" href="{% static 'main/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
 </head>
+<style>
+    .python::-webkit-slider-thumb {
+        --webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: radial-gradient(#81d9e9, navy);
+    }
+
+    .python::-moz-range-thumb {
+        --webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: radial-gradient(#81d9e9, navy);
+    }
+</style>
 
 <body>
+
     {% include 'main/navbar.html'%}
     <div class="main">
         <div class="container">
-            <form method="POST" id="signup-form" class="signup-form" action="#">
+            <form method="POST" id="signup-form" class="signup-form" action="{% url 'result' %}">
+
+                {% csrf_token %}
                 <div>
 
                     <h3>Introduction</h3>
@@ -48,20 +70,26 @@
                     </fieldset>
                     <h3>Personal info</h3>
                     <fieldset>
-                        <form action="/">
+                        
                             <center>
                                 <h2>Patient Information</h2>
                             </center>
-                            <p class="desc2" style="margin-bottom: -40px;">How old is the patient?</p>
+                            <p class="desc2" >How old is the patient?</p>
                             <div class="fieldset-content">
                                 <div class="donate-us">
                                     <div class="price_slider ui-slider ui-slider-horizontal">
-                                        <div id="slider-margin"></div>
+                                        <!-- <div id="slider-margin"></div>
+                    
                                         <p class="age">
                                             Age : &nbsp;
-                                            <span class="money" id="value-lower"></span>
-                                            <span class="money" id="value-upper"></span>
-                                        </p>
+                                            <span class="money" name="age"></span>
+                                             </p> -->
+                                         <div class="web" style="position:relative; margin: 1rem;">
+                                             <input style="appearance: none;--webkit-appearance: none;width: 700px;box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);border-radius: 25px;outline: none;background: linear-gradient(to right,#cfddff,#4966B1);" type="range" name="age" min="0" max="120" class="python"> 
+                                            <span style="position:absolute;bottom:50%;transform: translateY(50%);margin-left:20px;font-size:1.5rem;" class="money" name="age">50</span>
+                                
+                                         </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -70,21 +98,21 @@
                             <div class="fieldset-content">
                                 <p class="desc2" style="margin-top: 30px;">What is your sex?</p>
                                 <div class="radio">
-                                    <input class="a" type="radio" id="male" name="sex" value="male">
+                                    <input class="a" type="radio" id="male" name="sex" value="1">
                                     <label for="male">Male</label>
-                                    <input class="b" type="radio" id="female" name="sex" value="female">
+                                    <input class="b" type="radio" id="female" name="sex" value="0">
                                     <label for="female">Female</label>
                                 </div>
 
                                 <p class="desc2" style="margin-top: 50px;">Are you a front liner?</p>
                                 <div class="radio">
-                                    <input class="a" type="radio" id="yes" name="fliner" value="yes">
+                                    <input class="a" type="radio" id="yes" name="fliner" value="1">
                                     <label for="yes">Yes</label>
-                                    <input class="b" type="radio" id="no" name="fliner" value="no">
+                                    <input class="b" type="radio" id="no" name="fliner" value="0">
                                     <label for="no">No</label>
                                 </div>
                             </div>
-                        </form>
+
                     </fieldset>
 
                     <h3>Patient History</h3>
@@ -97,27 +125,27 @@
                         <div class="fieldset-content">
 
                             <p class="desc2">Did you travel outside of your city in the last few weeks?</p>
-                            <input class="a" type="radio" id="1" name="travel" value="11">
+                            <input class="a" type="radio" id="1" name="travel" value="1">
                             <label for="1">Yes</label>
-                            <input class="b" type="radio" id="2" name="travel" value="12">
+                            <input class="b" type="radio" id="2" name="travel" value="0">
                             <label for="2">No</label>
 
                             <p class="desc2">Did you visit a crowded place?</p>
-                            <input class="a" type="radio" id="3" name="crowd" value="13">
+                            <input class="a" type="radio" id="3" name="crowd" value="1">
                             <label for="3">Yes</label>
-                            <input class="b" type="radio" id="4" name="crowd" value="14">
+                            <input class="b" type="radio" id="4" name="crowd" value="0">
                             <label for="4">No</label>
 
                             <p class="desc2">Do you have comorbidity? (one disease for another disease)</p>
-                            <input class="a" type="radio" id="5" name="comorbid" value="15">
+                            <input class="a" type="radio" id="5" name="comorbid" value="1">
                             <label for="5">Yes</label>
-                            <input class="b" type="radio" id="6" name="comorbid" value="16">
+                            <input class="b" type="radio" id="6" name="comorbid" value="0">
                             <label for="6">No</label>
 
                             <p class="desc2">Did you meet any COVID-19 infected patients in the last few weeks?</p>
-                            <input class="a" type="radio" id="7" name="meet" value="17">
+                            <input class="a" type="radio" id="7" name="meet" value="1">
                             <label for="7">Yes</label>
-                            <input class="b" type="radio" id="8" name="meet" value="18">
+                            <input class="b" type="radio" id="8" name="meet" value="0">
                             <label for="8">No</label>
 
                         </div>
@@ -131,43 +159,56 @@
                         <p class="desc" style="margin-top: 80px; margin-bottom: 20px;">Do you have any of the following
                             symptoms?</p>
                         <div class="checkbox">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <input type="hidden" name="fever" value="0" />
+                            <input type="checkbox" id="vehicle1" name="fever" value="1">
                             <label for="vehicle1" class="checktext"> Fever</label><br>
 
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <input type="hidden" name="dry_cough" value="0" />
+                            <input type="checkbox" id="vehicle2" name="dry_cough" value="1">
                             <label for="vehicle2" class="checktext"> Dry Cough</label><br>
 
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <input type="hidden" name="sore_throat" value="0" />
+                            <input type="checkbox" id="vehicle3" name="sore_throat" value="1">
                             <label for="vehicle3" class="checktext"> Sore Throat</label><br>
 
-                            <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
+                            <input type="hidden" name="diarrhea" value="0" />
+                            <input type="checkbox" id="vehicle4" name="diarrhea" value="1">
                             <label for="vehicle4" class="checktext"> Diarrhea</label><br>
 
-                            <input type="checkbox" id="vehicle5" name="vehicle5" value="Boat">
+                            <input type="hidden" name="tiredness" value="0" />
+                            <input type="checkbox" id="vehicle5" name="tiredness" value="1">
                             <label for="vehicle5" class="checktext"> Tiredness</label><br>
 
-                            <input type="checkbox" id="vehicle6" name="vehicle6" value="Boat">
+                            <input type="hidden" name="headache" value="0" />
+                            <input type="checkbox" id="vehicle6" name="headache" value="1">
                             <label for="vehicle6" class="checktext"> Headache</label><br>
 
-                            <input type="checkbox" id="vehicle7" name="vehicle7" value="Boat">
+                            <input type="hidden" name="muscle_pain" value="0" />
+                            <input type="checkbox" id="vehicle7" name="muscle_pain" value="1">
                             <label for="vehicle7" class="checktext"> Muscle Pain</label><br>
 
-                            <input type="checkbox" id="vehicle8" name="vehicle8" value="Boat">
+                            <input type="hidden" name="rash_on_skin" value="0" />
+                            <input type="checkbox" id="vehicle8" name="rash_on_skin" value="1">
                             <label for="vehicle8" class="checktext"> Rash on Skin</label><br>
 
-                            <input type="checkbox" id="vehicle9" name="vehicle9" value="Boat">
+                            <input type="hidden" name="chest_pain" value="0" />
+                            <input type="checkbox" id="vehicle9" name="chest_pain" value="1">
                             <label for="vehicle9" class="checktext"> Chest Pain</label><br>
 
-                            <input type="checkbox" id="vehicle10" name="vehicle10" value="Boat">
+                            <input type="hidden" name="shortness_breath" value="0" />
+                            <input type="checkbox" id="vehicle10" name="shortness_breath" value="1">
                             <label for="vehicle10" class="checktext"> Shortness of Breath</label><br>
 
-                            <input type="checkbox" id="vehicle11" name="vehicle11" value="Boat">
+                            <input type="hidden" name="taste_smell" value="0" />
+                            <input type="checkbox" id="vehicle11" name="taste_smell" value="1">
                             <label for="vehicle11" class="checktext"> Loss of Taste or Smell</label><br>
 
-                            <input type="checkbox" id="vehicle12" name="vehicle12" value="Boat">
+                            <input type="hidden" name="speech_movement" value="0" />
+                            <input type="checkbox" id="vehicle12" name="speech_movement" value="1">
                             <label for="vehicle12" class="checktext"> Loss of Speech or Movement</label><br>
 
-                            <input type="checkbox" id="vehicle13" name="vehicle13" value="Boat">
+                            <input type="hidden" name="saturation" value="0" />
+                            <input type="checkbox" id="vehicle13" name="saturation" value="1">
                             <label for="vehicle13" class="checktext"> Oxygen Saturation(Lower than 92%)</label><br>
                         </div>
 
@@ -180,22 +221,23 @@
                         </center>
 
                         <p class="desc2">Do you feel difficult to complete a short sentence in one breath?</p>
-                        <input class="a" type="radio" id="3" name="sentence" value="13">
+                        <input class="a" type="radio" id="3" name="sentence" value="1">
                         <label for="3">Yes</label>
-                        <input class="b" type="radio" id="4" name="sentence" value="14">
+                        <input class="b" type="radio" id="4" name="sentence" value="0">
                         <label for="4">No</label>
 
                         <p class="desc2">Any of these symptoms manifested through someone in your family?</p>
-                        <input class="a" type="radio" id="3" name="family" value="13">
+                        <input class="a" type="radio" id="3" name="family" value="1">
                         <label for="3">Yes</label>
-                        <input class="b" type="radio" id="4" name="family" value="14">
+                        <input class="b" type="radio" id="4" name="family" value="0">
                         <label for="4">No</label>
 
                         <p class="desc2">If you want to add any more symptom, please write down here.</p>
-                        <textarea class="desctext" placeholder="Enter your text here..." name="" id="" cols="30"
+                        <textarea class="desctext" placeholder="Enter your text here..." name="short_text" id="" cols="30"
                             rows="10"></textarea>
                     </fieldset>
                 </div>
+
             </form>
         </div>
 
