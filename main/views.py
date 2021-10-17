@@ -4,6 +4,11 @@ import joblib
 
 #Home
 
+def handler404(request, exception):
+    return render(request, 'main/error_404.html')
+
+def handler500(request):
+    return render(request, 'main/error_404.html')
 
 def home(request):
     return render(request, 'main/index.html')
@@ -44,6 +49,8 @@ def result(request):
 
     ans = cls.predict([lis])
 
+    print(type(ans))
+
 
     if request.method == 'POST':
         if request.POST.get('age') and request.POST.get('sex') and request.POST.get('fliner') and request.POST.get('travel') and request.POST.get('crowd') and request.POST.get('comorbid') and request.POST.get('meet') and request.POST.get('fever') and request.POST.get('dry_cough') and request.POST.get('sore_throat') and request.POST.get('diarrhea') and request.POST.get('tiredness') and request.POST.get('headache') and request.POST.get('muscle_pain') and request.POST.get('rash_on_skin') and request.POST.get('chest_pain') and request.POST.get('shortness_breath') and request.POST.get('taste_smell') and request.POST.get('speech_movement') and request.POST.get('saturation') and request.POST.get('sentence') and request.POST.get('family') and request.POST.get('short_text'):
@@ -80,7 +87,7 @@ def result(request):
 
 
 
-    return render(request, 'main/result.html',{'ans':ans})
+    return render(request, 'main/result.html',{'ans':ans,'checkup':checkup})
 
 def about(request):
     return render(request, 'main/about.html')

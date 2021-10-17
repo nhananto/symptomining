@@ -26,12 +26,12 @@
         </div>
     </nav>
 
-
+    {% if ans == 0 %}
     <div class="container">
         <div class="jmb1">
             <div class="jumbotron">
                 <h2 class="hd1">Result</h2>
-                <p class="lead hd1">Your COVID-19 test result is <b>{{ans}}</b></p>
+                <p class="lead hd1">Your COVID-19 test result is <b>Negative</b></p>
                 <hr class="my-4">
                 <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
                     intended to replace professional medical advice. Please contact nearby hospitals to get proper
@@ -52,6 +52,63 @@
             </div>
         </div>
     </div>
+
+     {% elif ans == 1 %}
+     <div class="container">
+        <div class="jmb1">
+            <div class="jumbotron">
+                <h2 class="hd1">Result</h2>
+                <p class="lead hd1">Your COVID-19 test result is <b>Positive</b></p>
+                <hr class="my-4">
+                <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
+                    intended to replace professional medical advice. Please contact nearby hospitals to get proper
+                    medication.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jmb2">
+            <div class="jumbotron">
+                <h2 class="hd1">Recommendation</h2>
+                <p class="lead hd1">Your answers point that you have similarity with COVID-19 symptoms. Follow the
+                    recommendation below and consult your health provider for diagnosis.</p>
+                <hr class="my-4">
+                <p class="hd1">As your result is positive, so you need to worry that much. Still you are feeling
+                    sick, please consult with a doctor for a regular checkup.</p>
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+    <div class="container">
+        <div class="jmb1">
+            <div class="jumbotron">
+                <h2 class="hd1">Result</h2>
+                <p class="lead hd1">Your COVID-19 test result is <b>Serious</b></p>
+                <hr class="my-4">
+                <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
+                    intended to replace professional medical advice. Please contact nearby hospitals to get proper
+                    medication.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jmb2">
+            <div class="jumbotron">
+                <h2 class="hd1">Recommendation</h2>
+                <p class="lead hd1">Your answers point that you have high similarity with COVID-19 symptoms. Follow the
+                    recommendation below and consult your health provider for diagnosis.</p>
+                <hr class="my-4">
+                <p class="hd1">As your result is serious, so you need to worry that much. Still you are feeling
+                    sick, please consult with a doctor for a regular checkup.</p>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+
 
     <div class="container">
         <div class="jmb3">
@@ -79,43 +136,43 @@
                 </div>
                 <div class="modal-body">
                     <h6>Information</h6>
-                    <span class="ml-4">Age:&nbsp; 40</span>
-                    <span class="ml-5">Sex:&nbsp; Female</span>
-                    <span class="ml-5">Front-liner:&nbsp; Yes</span>
+                    <span class="ml-4">Age:&nbsp; {{checkup.age}}</span>
+                    <span class="ml-5">Sex:&nbsp; {% if checkup.sex == 0 %} Female {% else %} Male {% endif %}</span>
+                    <span class="ml-5">Front-liner:&nbsp; {% if checkup.fliner == 1 %} Yes {% else %} No {% endif %}</span>
 
                     <hr>
                     <h6>History</h6>
                     <ul>
-                        <i class="fas fa-check-circle"></i> Travel outside:&nbsp; No <br>
-                        <i class="fas fa-check-circle"></i> Visit a crowded place:&nbsp; Yes <br>
-                        <i class="fas fa-check-circle"></i> Comorbidity:&nbsp; No <br>
-                        <i class="fas fa-check-circle"></i> Meet any COVID-19 infected patients:&nbsp; Yes <br>
+                        <i class="fas fa-check-circle"></i> Travel outside:&nbsp; {% if checkup.travel == '1' %} Yes {% else %} No {% endif %} <br>
+                        <i class="fas fa-check-circle"></i> Visit a crowded place:&nbsp; {% if checkup.crowd == '1' %} Yes {% else %} No {% endif %} <br>
+                        <i class="fas fa-check-circle"></i> Comorbidity:&nbsp; {% if checkup.comorbid == '1' %} Yes {% else %} No {% endif %} <br>
+                        <i class="fas fa-check-circle"></i> Meet any COVID-19 infected patients:&nbsp; {% if checkup.meet == '1 '%} Yes {% else %} No {% endif %} <br>
                     </ul>
                     
 
                     <hr>
                     <h6>Symptoms</h6>
                     <ul class="symp">
-                        <i class="fas fa-arrow-right"> Fever </i> <br>
-                        <i class="fas fa-arrow-right"> Dry Cough </i> <br>
-                        <i class="fas fa-arrow-right"> Sore Throat</i> <br>
-                        <i class="fas fa-arrow-right"> Diarrhea</i> <br>
-                        <i class="fas fa-arrow-right"> Tiredness </i><br>
-                        <i class="fas fa-arrow-right"> Headache</i><br>
-                        <i class="fas fa-arrow-right"> Muscle Pain</i><br>
-                        <i class="fas fa-arrow-right"> Rash on Skin</i><br>
-                        <i class="fas fa-arrow-right"> Chest Pain</i><br>
-                        <i class="fas fa-arrow-right"> Shortness of Breath</i><br>
-                        <i class="fas fa-arrow-right"> Loss of Taste or Smell</i><br>
-                        <i class="fas fa-arrow-right"> Loss of Speech or Movement </i> <br>
-                        <i class="fas fa-arrow-right"> Oxygen Saturation(Lower than 92%)</i> <br>
+                        {% if checkup.fever == '1' %} <i class="fas fa-arrow-right"> Fever </i> <br> {% endif %}
+                         {% if checkup.dry_cough == '1' %} <i class="fas fa-arrow-right"> Dry Cough </i> <br> {% endif %}
+                         {% if checkup.sore_throatt == '1' %} <i class="fas fa-arrow-right"> Sore Throat</i> <br> {% endif %}
+                         {% if checkup.diarrhea == '1' %} <i class="fas fa-arrow-right"> Diarrhea</i> <br> {% endif %}
+                         {% if checkup.tiredness == '1' %}<i class="fas fa-arrow-right"> Tiredness </i><br> {% endif %}
+                         {% if checkup.headache == '1' %} <i class="fas fa-arrow-right"> Headache</i><br> {% endif %}
+                         {% if checkup.muscle_pain == '1' %} <i class="fas fa-arrow-right"> Muscle Pain</i><br> {% endif %}
+                         {% if checkup.rash_on_skin == '1' %} <i class="fas fa-arrow-right"> Rash on Skin</i><br> {% endif %}
+                         {% if checkup.chest_pain == '1' %} <i class="fas fa-arrow-right"> Chest Pain</i><br> {% endif %}
+                         {% if checkup.shortness_breath == '1' %} <i class="fas fa-arrow-right"> Shortness of Breath</i><br> {% endif %}
+                         {% if checkup.taste_smell == '1' %} <i class="fas fa-arrow-right"> Loss of Taste or Smell</i><br> {% endif %}
+                         {% if checkup.speech_movement == '1' %} <i class="fas fa-arrow-right"> Loss of Speech or Movement </i> <br> {% endif %}
+                         {% if checkup.saturation == '1' %} <i class="fas fa-arrow-right"> Oxygen Saturation(Lower than 92%)</i> <br> {% endif %}
                     </ul>
                     <hr>
                     <h6>Test</h6>
                     <ul>
-                        <i class="fas fa-check-square"></i> Difficult to complete a short sentence: &nbsp; Yes <br>
-                        <i class="fas fa-check-square"></i> Symptoms manifested through someone in your family:&nbsp; Yes <br>
-                        <i class="fas fa-check-square"></i> Difficult to complete a short sentence symptoms manifested through someone in your family                  
+                        <i class="fas fa-check-square"></i> Difficult to complete a short sentence: &nbsp; {% if checkup.sentence == '1' %} Yes {% else %} No {% endif %} <br>
+                        <i class="fas fa-check-square"></i> Symptoms manifested through someone in your family:&nbsp; {% if checkup.family == '1' %} Yes {% else %} No {% endif %} <br>
+                        {% comment %} <i class="fas fa-check-square"></i> Difficult to complete a short sentence symptoms manifested through someone in your family                   {% endcomment %}
                     </ul>
                   
                 </div>
