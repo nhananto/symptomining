@@ -1,3 +1,5 @@
+#python manage.py collectstatic
+
 from django.shortcuts import render
 from .models import Checkup
 import joblib
@@ -11,7 +13,7 @@ def handler500(request):
     return render(request, 'main/error_404.html')
 
 def home(request):
-    return render(request, 'main/index.html')
+    return render(request, 'main/home.html')
 
 def checkup(request):
     return render(request, 'main/checkup.html')
