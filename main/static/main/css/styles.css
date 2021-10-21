@@ -1,6 +1,6 @@
-/* background-image:url("https://i.ibb.co/vVSdYp2/Banner-1.png") */
+/* background-image:url("https://i.ibb.co/WKfrpQb/Banner-1.png") */
 /* background-image:url("https://i.ibb.co/8BNwFJK/Banner-2.png") */
-/* background-image:url("https://i.ibb.co/QJ03K8z/Banner-3.png") */
+/* background-image:url("https://i.ibb.co/r0KYDHz/Banner-3.png") */
 /* ****************home**************** */
 .body
 {
@@ -8,6 +8,7 @@
   font-family: 'Roboto', sans-serif;
 
 } 
+
 
 .homejumb1 .jumbotron
 {
@@ -17,7 +18,7 @@
 	margin: auto;
 	margin-top:3rem;
 	border-radius: 0.3rem;
-	background-image:url("https://i.ibb.co/vVSdYp2/Banner-1.png");
+	background-image:url("https://i.ibb.co/WKfrpQb/Banner-1.png");
   	background-repeat: no-repeat;
   	background-size: 100% 619px;
 	border: 1px solid rgb(207, 207, 207);
@@ -47,7 +48,7 @@
 	margin-top:7rem;
 	border-radius: 0.3rem;
 	border: 1px solid rgb(207, 207, 207);
-	background-image:url("https://i.ibb.co/QJ03K8z/Banner-3.png");
+	background-image:url("https://i.ibb.co/r0KYDHz/Banner-3.png");
 	background-repeat: no-repeat;
 	background-size: 100% 630px;
 }
@@ -159,12 +160,9 @@ background: linear-gradient(to bottom, #014e6e 60%, #417f94);
 }
 
 .homejumb1 .health{
+  text-align: center;
   margin-top:13% !important;
-  width: 600px;
   margin-left: 22%;
-}
-.homejumb1 .health1{
-  margin-left: 12%;
 }
 .homejumb1 .lead{
 margin-top: 27%;
@@ -188,8 +186,8 @@ background: linear-gradient(to bottom, #014e6e 60%, #417f94);
   position: relative;
   margin-top: 8%;
   margin-left: 55%;
-  width:500px;
-  margin-bottom: 4%;
+  
+  margin-bottom: 3%;
 
 }
 .homejumb2 .more{
@@ -232,8 +230,8 @@ font-weight: 700;
 }
 .homejumb3 .answer{
   position:relative;
-  margin-top: 3.7%;
-  margin-left: 22%;
+  margin-top: 4.5%;
+  margin-left: 26%;
   font-size: 15px;
   margin-bottom: 1.9%;
   font-weight: 500;
@@ -241,29 +239,29 @@ font-weight: 700;
 .homejumb3 .enter{
   position:relative;
   margin-top: -3px;
-  margin-left: 22%;
+  margin-left: 26%;
   font-size: 15px;
   margin-bottom: 1.5%;
 
 }
 .homejumb3 .done{
   position:relative;
-  margin-left: 22%;
+  margin-left: 26%;
   font-size: 15px;
 }
 .homejumb3 .result{
   position: relative;
-  margin-left: 25%;
+  margin-left: 28%;
   margin-top: -5px;
 }
 .homejumb3 .recom{
   position: relative;
-  margin-left: 25%;
+  margin-left: 28%;
   margin-top: -5px;
 }
 .homejumb3 .see{
   position: relative;
-  margin-left: 25%;
+  margin-left: 28%;
   margin-top: -5px;
 }
 .homejumb3 .test{
@@ -275,6 +273,7 @@ font-weight: 700;
 .hd1{
     color:#fff;
     text-align: center;
+    position: relative;
 }  
 
 .symp i{
