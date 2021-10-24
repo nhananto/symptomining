@@ -15,23 +15,50 @@
     <link rel="stylesheet" href="{% static 'main/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
 </head>
 <style>
-    .python::-webkit-slider-thumb {
-        --webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: radial-gradient(#81d9e9, navy);
-    }
+    .slider-wrapper{
+    position: relative;
+    margin: 1rem;
 
-    .python::-moz-range-thumb {
-        --webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: radial-gradient(#81d9e9, navy);
-    }
+}
+
+.slider{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 650px;
+    height: 20px;
+    background: linear-gradient(45deg, transparent, #288F94);
+    border-radius: 25px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: radial-gradient(  #3ee0e9, #288F94);
+}
+
+.slider::-moz-range-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: radial-gradient(#3ee0e9, #288F94);
+}
+
+.web span{
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    margin-left:20px;
+    font-size:1.5rem;
+    
+}
 </style>
 
 <body>
@@ -85,12 +112,8 @@
                                             <span class="money" name="age"></span>
                                              </p> -->
                                     <div class="web" style="position:relative; margin: 1rem;">
-                                        <input
-                                            style="appearance: none;--webkit-appearance: none;width: 700px;box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);border-radius: 25px;outline: none;background: linear-gradient(to right,#cfddff,#4966B1);"
-                                            type="range" name="age" min="0" max="120" class="python">
-                                        <span
-                                            style="position:absolute;bottom:50%;transform: translateY(50%);margin-left:20px;font-size:1.5rem;"
-                                            class="money" name="age">50</span>
+                                        <input type="range" name="age" min="0" max="120" class="slider">
+                                        <span class="money" name="age">50</span>
 
                                     </div>
 
