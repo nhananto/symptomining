@@ -17,7 +17,7 @@
             </ul>
             <ul class="right navbar-nav">
                 <li class="nav-item">
-                    <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'about' %}" >About</a>
+                    <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'about' %}" >Article</a>
                 </li>
                 <li class="nav-item button-nav ml-4">
                     <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
@@ -30,12 +30,12 @@
     <div class="container">
         <div class="jmb1">
             <div class="jumbotron">
-                <h2 class="hd1">Result</h2>
-                <p class=" hd1">Your COVID-19 test result is <b>Negative</b></p>
-                <hr class="my-4">
-                <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
+                 
+                <p class="hd11">You Have <span style="color: #1AC98E;">Nothing to Worry</span> About</p>
+               
+                <p class="hd12">Please keep in mind that the result has given is dependent on your answers. It is not
                     intended to replace professional medical advice. Please contact nearby hospitals to get proper
-                    medication.</p>
+                    medication.</p> 
             </div>
         </div>
     </div>
@@ -43,24 +43,24 @@
     <div class="container">
         <div class="jmb2">
             <div class="jumbotron">
-                <h2 class="hd1">Recommendation</h2>
-                <p class=" hd1">Your answers point that you have no similarity with COVID-19 symptoms. Follow the
+               
+                <p class=" rec1">Your answers point that you have no similarity with COVID-19 symptoms. Follow the
                     recommendation below and consult your health provider for diagnosis.</p>
-                <hr class="my-4">
-                <p class="hd1">As your result is negative, so you don't need to worry that much. Still you are feeling
+               
+                <p class="rec2">As your result is negative, so you don't need to worry that much. Still you are feeling
                     sick, please consult with a doctor for a regular checkup.</p>
+                      <a href="https://surokkha.gov.bd/" class="vac">Get Vaccinated +</a> <br>
+                      <a href="{% url 'about' %}" class="vac">Learn more from our article about Coronavirus >></a>
             </div>
         </div>
     </div>
 
      {% elif ans == 1 %}
      <div class="container">
-        <div class="jmb1">
+        <div class="jmb11">
             <div class="jumbotron">
-                <h2 class="hd1">Result</h2>
-                <p class=" hd1">Your COVID-19 test result is <b>Positive</b></p>
-                <hr class="my-4">
-                <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
+               <p class="hd11">Your Condition is <span style="color:#FFBA00;">Not Good</span> Enough</p>
+                <p class="hd12">Please keep in mind that the result has given is dependent on your answers. It is not
                     intended to replace professional medical advice. Please contact nearby hospitals to get proper
                     medication.</p>
             </div>
@@ -70,24 +70,24 @@
     <div class="container">
         <div class="jmb2">
             <div class="jumbotron">
-                <h2 class="hd1">Recommendation</h2>
-                <p class=" hd1">Your answers point that you have similarity with COVID-19 symptoms. Follow the
+              
+                <p class=" rec1">Your answers point that you have similarity with COVID-19 symptoms. Follow the
                     recommendation below and consult your health provider for diagnosis.</p>
-                <hr class="my-4">
-                <p class="hd1">As your result is positive, so you need to worry that much. Still you are feeling
+                  
+                <p class="rec2">As your result is positive, so you need to worry that much. Still you are feeling
                     sick, please consult with a doctor for a regular checkup.</p>
+                <a href="https://surokkha.gov.bd/" class="vac">Get Vaccinated +</a> <br>
+                <a href="{% url 'about' %}" class="vac">Learn more from our article about Coronavirus</a>
             </div>
         </div>
     </div>
 
     {% else %}
     <div class="container">
-        <div class="jmb1">
+        <div class="jmb111">
             <div class="jumbotron">
-                <h2 class="hd1">Result</h2>
-                <p class=" hd1">Your COVID-19 test result is <b>Serious</b></p>
-                <hr class="my-4">
-                <p class="hd1">Please keep in mind that the result has given is dependent on your answers. It is not
+                <p class="hd11">You May Need <span style="color:#FF5C5C;">Urgent</span> Medical Care</p>
+                <p class="hd12">Please keep in mind that the result has given is dependent on your answers. It is not
                     intended to replace professional medical advice. Please contact nearby hospitals to get proper
                     medication.</p>
             </div>
@@ -97,12 +97,14 @@
     <div class="container">
         <div class="jmb2">
             <div class="jumbotron">
-                <h2 class="hd1">Recommendation</h2>
-                <p class=" hd1">Your answers point that you have high similarity with COVID-19 symptoms. Follow the
+               
+                <p class=" rec1">Your answers point that you have high similarity with COVID-19 symptoms. Follow the
                     recommendation below and consult your health provider for diagnosis.</p>
-                <hr class="my-4">
-                <p class="hd1">As your result is serious, so you need to worry that much. Still you are feeling
+                 
+                <p class="rec2">As your result is serious, so you need to worry that much. Still you are feeling
                     sick, please consult with a doctor for a regular checkup.</p>
+                       <a href="https://surokkha.gov.bd/" class="vac">Get Vaccinated +</a> <br>
+                       <a href="{% url 'about' %}" class="vac">Learn more from our article about Coronavirus</a>
             </div>
         </div>
     </div>
@@ -113,10 +115,12 @@
     <div class="container">
         <div class="jmb3">
             <div class="jumbotron">
-                <h2 class="hd1">Summary</h2>
-                <p class="hd1">Your Answers</p>
-                <a href="#"><button class="btn button1" style="margin-left: 400px;" data-toggle="modal"
-                        data-target="#exampleModalCenter">Show</button></a>
+                <!-- <h2 class="sum1">Summary</h2>
+                <p class="sum2">Your Answers</p> -->
+                <a href="#" class="show" style="margin-left: 85%; margin-top:105px; position: absolute;" data-toggle="modal"
+                        data-target="#exampleModalCenter"><span style="font-size:16px;font-weight: bold;">Show</span></a>
+              
+                 <a href="{% url 'checkup' %}" class="start">Start</a>
             </div>
         </div>
     </div>
