@@ -93,3 +93,6 @@ def result(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def team(request):
+    return render(request, 'main/team.html')

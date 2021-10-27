@@ -107,22 +107,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* @extend display-flex; */
 display-flex, .form-flex, .form-date-group, .steps ul, .title, .title .step-number, .actions ul li a, .form-radio-flex, .form-find {
   display: flex;
@@ -660,54 +644,3 @@ box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   margin-right: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-.web{
-  position:relative;
-  margin: 1rem;
-}
-.python{
-  appearance: none;
---webkit-appearance: none;
-
-width: 450px;
-height:40px;
-background-color: white;
-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-border-radius: 25px;
-outline: none;
-}
-
-.python::-webkit-slider-thumb{
---webkit-appearance: none;
-appearance: none;
-width:50px;
-height: 50px;
-border-radius: 50%;
-background: radial-gradient(#81d9e9,navy);
-}
-
-.python::-moz-range-thumb{
---webkit-appearance: none;
-appearance: none;
-width:50px;
-height: 50px;
-border-radius: 50%;
-background: radial-gradient(#81d9e9,navy);
-}
-
-.web span{
-position:absolute;
-bottom:50%;
-transform: translateY(50%);
-margin-left:20px;
-font-size:2rem;
-}

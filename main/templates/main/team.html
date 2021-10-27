@@ -1,0 +1,156 @@
+{% load static %}
+{% include 'main/partials/styles.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>How To Create</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+        <!-- Bootstrap CSS -->
+        
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-md navbar-light justify-content-center" style="background-color:#2493a1; font-family: 'Roboto', sans-serif;">
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav" style="margin-left:400px;">
+                <a href="{% url 'home' %}" style="text-decoration: none;">
+                    <img style="margin-left: 50px; margin-top: -5px;" src="{% static 'main/img/logo.png' %}" alt="logo"
+                        height="50px">
+                    <b style="color:white; margin-top:12px; margin-left:5px;">Symtomining</b>
+                </a>
+            </ul>
+            <ul class="right navbar-nav">
+                <li class="nav-item">
+                    <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'about' %}" >Article</a>
+                </li>
+                <li class="nav-item button-nav ml-4">
+                    <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <!-- Our Team Section -->
+        <section class="our-team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Our Team Section</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere accusantium harum voluptate error, suscipit earum itaque fugiat voluptates non odio at ea sed dolores nostrum ab molestias quas nemo quae!</p>
+                    </div>
+                </div>
+                <hr class="mb-5 mt-4">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <img src="{% static 'main/img/Ananto.jpg' %}" class="img-fluid" alt="" />
+                            <div class="member-info">
+                                <div class="member-detail">
+                                    <h4>Nazmul Hossain Ananto</h4>
+                                    <span>Full Stack Developer <br>& Researcher</span>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <img src="{% static 'main/img/Sonia.jpg' %}" class="img-fluid" alt="" />
+                            <div class="member-info">
+                                <div class="member-detail">
+                                    <h4>Sonia Akhter</h4>
+                                    <span>Full Stack Developer</span>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <img src="{% static 'main/img/Rony.jpg' %}" class="img-fluid" alt="" />
+                            <div class="member-info">
+                                <div class="member-detail">
+                                    <h4>Md Rony Howlader</h4>
+                                    <span>Web Developer</span>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <img src="{% static 'main/img/Ruponti.jpg' %}" class="img-fluid" alt="" />
+                            <div class="member-info">
+                                <div class="member-detail">
+                                    <h4>Ishrat Jahan Ruponti</h4>
+                                    <span>Researcher</span>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mt-5">
+            </div>
+        </section>
+        <!-- End Our Team Section -->
+        <footer class="footer has-cards">
+        <div class="container">
+            <hr>
+            <div class="row align-items-center justify-content-md-between">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        &copy; 2021 <a href="#" style="text-decoration: none;">Symptominig</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-footer justify-content-end">
+                        <li class="nav-item">
+                            <a href="{% url 'team' %}" class="nav-link">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
