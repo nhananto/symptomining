@@ -91,8 +91,8 @@ def result(request):
 
     return render(request, 'main/result.html',{'ans':ans,'checkup':checkup})
 
-def about(request):
-    return render(request, 'main/about.html')
+def article(request):
+    return render(request, 'main/article.html')
 
 def team(request):
     return render(request, 'main/team.html')

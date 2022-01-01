@@ -1,0 +1,199 @@
+{% load static %}
+{% include 'main/partials/meta.html' %}
+{% include 'main/partials/styles.html' %}
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light justify-content-center"
+        style="background-color:#2493a1; font-family: 'Roboto', sans-serif;">
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav" style="margin-left:400px;">
+                <a href="{% url 'home' %}" style="text-decoration: none;">
+                    <img style="margin-left: 50px; margin-top: -5px;" src="{% static 'main/img/logo.png' %}" alt="logo"
+                        height="50px">
+                    <b style="color:white; margin-top:12px; margin-left:5px;">Symtomining</b>
+                </a>
+            </ul>
+            <ul class="right navbar-nav">
+                <li class="nav-item">
+                    <a style="color: white; margin-right: 10px;" class="nav-link" href="{% url 'article' %}"
+                        data-target="#myModal" data-toggle="modal">Article</a>
+                </li>
+                <li class="nav-item button-nav ml-4">
+                    <a href="{% url 'checkup' %}"><button class="btn button1">Start Checkup</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+   <div class="container"> <div class="jmb5"></div></div>
+
+    <div class="container" style="  font-family: 'Roboto', sans-serif; ">
+        <div class="jmb4">
+            <div class="jumbotron">
+                <h2 class="qs">Coronavirus: What you need to know about COVID-19</h2>
+                <p style="color:gray; margin-left:15px;">Contents</p>
+                <ul class="qsid">
+                    <a href="#1">
+                        <span>&#8600;</span> What is a coronavirus, and what does it do? What exactly is COVID-19? <br><br>
+                    </a>
+                    <a href="#2">
+                        <span>&#8600;</span> What is the method of it's transmission? <br><br>
+                    </a>
+                    <a href="#3">
+                        <span>&#8600;</span> Is it possible to catch COVID-19 from someone who is asymptomatic? <br><br>
+                    </a>
+                    <a href="#4">
+                        <span>&#8600;</span> What are the signs and symptoms? <br><br>
+                    </a>
+                    <a href="#5">
+                        <span>&#8600;</span> What can I do to avoid becoming infected? <br><br>
+                    </a>
+                    <a href="#6">
+                        <span>&#8600;</span> Social distancing, quarantine and self-isolation <br><br>
+                    </a>
+                    <a href="#7">
+                        <span>&#8600;</span> What are the potential dangers? <br><br>
+                    </a>
+                    <a href="#8">
+                        <span>&#8600;</span> I'm concerned that I may have COVID-19. So, what do I do now? <br><br>
+                    </a>
+                    <a href="#9">
+                        <span>&#8600;</span> COVID-19 testing – the good, the bad, and the inconvenient <br><br>
+                    </a>
+                    <a href="#10">
+                        <span>&#8600;</span> Is there a treatment or a vaccination for this disease? <br><br>
+                    </a>
+                    <a href="#11">
+                        <span>&#8600;</span> Variants of COVID-19 <br><br>
+                    </a>
+                    <a href="#12">
+                        <span>&#8600;</span> During a pandemic, fear, loneliness, and anxiety are common.<br><br>
+                    </a>
+                    <a href="#13">
+                        <span>&#8600;</span> COVID-19 and Pregnancy <br><br>
+                    </a>              
+                    <a href="#14">
+                        <span>&#8600;</span> Scam warning
+                    </a>
+
+                </ul>
+                <hr class="my-4">
+                <h5>Question Answers</h5>
+                <ul>
+                    <li id="1" class="qsans" >What is a coronavirus, and what does it do? What exactly is COVID-19?</li>
+                    <p class="qsansp">Coronaviruses are a kind of virus that infects both humans and animals. They cause up to one-third of all respiratory infections in adults and children, varying from the cold or flu to more serious illnesses like as pneumonia. These viruses have been linked to a number of respiratory illness outbreaks in the past, notably SARS, MERS, and now COVID-19. The new coronavirus is officially known as severe acute respiratory syndrome coronavirus 2. (SARS-CoV-2). COVID-19 has been labeled a pandemic by the World Health Organization (WHO) as of March 11, 2020, which does not refer to the severity of the illness but rather to its geographic expansion, with a high risk of community spread.</p>
+                    <li id="2" class="qsans">What is the method of it's transmission?</li>
+                    <p class="qsansp">COVID-19 is transmitted through the air, especially when an infected person coughs or sneezes. Other persons, items, and surfaces in the area of the diseased individual are contaminated by these droplets. When other people come into contact with these things or surfaces, the virus is transferred to their faces, particularly the eyes, nose, and mouth.</p>
+                    <p class="qsansp">It is critical to maintain a social distance of one meter from an infected individual in order to avoid infection. The virus has been discovered to live for several hours, if not days, on surfaces. As a result, regular handwashing after coming into touch with various surfaces, such as door handles, handrails, elevator buttons, and so on, may assist you from contracting the virus.</p>
+                    <p class="qsansp">If you come into contact with the virus from one of these carrier surfaces, your phones, money, and keyboards may unwittingly contain the pathogen. Disinfect them on a regular basis.</p>
+                    <li id="3" class="qsans">Is it possible to catch COVID-19 from someone who is asymptomatic?</li>
+                    <p class="qsansp">It's unlikely that you'll catch COVID-19 from someone who hasn't shown any signs or symptoms. Many persons with COVID-19, on the other hand, simply have minor symptoms. This is especially true when the illness is in its early stages. COVID-19 can thus be contracted from someone who, for example, has a moderate cough but does not appear to be unwell. According to some studies, the illness may be transmitted before symptoms appear. However, this isn't thought to be the virus's primary mode of transmission.</p>
+                    <li id="4" class="qsans">What are the signs and symptoms?</li>
+                    <p class="qsansp">After being exposed to the virus for 2 to 14 days, symptoms might occur. They usually appear within 5-6 days for the majority of people. <ul><li>Fever (80-90 percent of cases) is defined as a body temperature of more than 38.3°C. This is the most common symptom, which might be accompanied by chills. Adults are more likely to have it than children.</li><li>Cough (59-82% of the time) - generally dry.</li><li>Breathing trouble, or shortness of breath (31-55 percent of patients), comes 5-8 days after the onset of the disease's first symptoms.</li><li>Anosmia is a sudden loss of smell that can be partial or full.</li><li>Morbilliform rash, hives, vesicular (varicella-like) eruptions (small papules, vesicles, pustules) or chilblain-like acral lesions are cutaneous symptoms (on fingers, elbows, toes).</li></ul></p>
+                    <p class="qsansp">Muscle soreness, weariness, increased phlegm production, headache, sore throat (during the start of the disease), chest pain, or coughing up blood are all possible symptoms (5 percent of cases). Gastrointestinal symptoms such as nausea, vomiting, and diarrhea are also present in 10% of patients.</p>
+                    <p class="qsansp"><b>Important:</b> Viruses are very prevalent during this time of year. Many of the symptoms of COVID-19 are similar to those of other illnesses, making it difficult to identify. Cough and fever are the most common signs of COVID-19 infection. These are, however, symptoms of the ordinary flu. Sneezing, runny nose, sore throat, exhaustion, and muscular pains, on the other hand, are more indicative of other infectious disorders.</p>
+                    <li id="5" class="qsans">What can I do to avoid becoming infected?</li>
+                    <p class="qsansp">Dos: <ul><li>Hands should be washed with hot water and soap or an alcohol-based sanitizer on a regular basis (60 percent alcohol). If your hands appear to be unclean, wash them with soap and water.</li><li>If you have to cough or sneeze, use your elbow instead of your hand to cover your mouth and nose.</li><li>Keep a space of at least 2 meters (6 feet) between yourself and others.</li><li>In public places, use a cloth face covering, especially if there is a lot of community-based transmission. <ul><li>Cloth face coverings should: <ul><li>fit firmly yet pleasantly against the side of the face</li><li>be fastened with ties or ear loops</li><li>allow for unrestricted ventilation</li><li>may be washed and dried without causing harm to the fabric or changing its form</li></ul></li><li>Surgical masks and N-95 respirators should not be used since they are essential items for healthcare workers and other medical first responders.</li><li>Visit the CDC page for additional information about cloth face coverings and how to create them.</li><li>Leave your shoes at the front door, especially if you have children or newborns who like to crawl about on the floor.</li><li>Thoroughly clean your fruits and veggies.</li></ul></li></ul></p>
+                    <p class="qsansp">Donts: <ul><li>Touch your face sparingly, particularly your mouth, eyes, and nose.</li><li>If you have a cold or the flu, don't go to work or school.</li><li>When traveling, stay away from busy public areas.</li><li>Avoid interacting with persons who are ill.</li><li>If you don't have any symptoms, don't stockpile or use surgical masks. <ul><li>They will not keep you from being infected.</li><li>As a result, you are contributing to supply shortages in hospitals, where they are most needed.</li><li>However, there are times when wearing a mask is recommended.</li></ul></li><li>If you think you've been infected with the coronavirus, don't go to your doctor. It's possible that you'll spread the virus to others. Instead, contact your healthcare professional or local health authorities.</li><li>If you are instructed to travel to the hospital, do not use a cab or public transportation.</li><li>When exercising, avoid wearing a mask.</li></ul></p>
+                    <p class="qsansp"><b>WHO Director General's Statement:</b> Everyone, including governments, corporations, and individuals, has a role to play in limiting this illness. Our responsibility is to not be a virus carrier in order to break the chain of transmission and decrease the pressure on the health-care system. Staying at home, washing your hands often, and keeping a distance of at least a metre from people are the most effective measures to prevent transmission and illness in yourself and others.</p>
+                    <li id="6" class="qsans">Social distancing, quarantine and self-isolation</li>
+                    <p class="qsansp">Healthy individuals have been implementing social separation all across the world. These methods can help "flatten the curve" of those who are at risk of becoming infected at any one moment. To minimize congestion in hospitals and running out of medical supplies and equipment, the objective is to have fewer people seeking healthcare at the same time.</p>
+                    <p class="qsansp">Governments throughout the world, however, are enforcing alternative measures like as quarantine and self-isolation. Many individuals are perplexed by the plethora of phrases being thrown about. The definitions for each of these may be found below.</p>
+                    <p class="qsansp">Measures performed to increase the physical separation between people in order to inhibit the transmission of the virus are known as social distancing. Staying at home, avoiding crowds, working from home if feasible, meeting friends and family online rather than in person, and keeping a distance of 1 meter from another person when in a public area are just a few of them.</p>
+                    <p class="qsansp">After exposure or probable exposure to an illness, quarantine means keeping at home and away from other people as much as possible. People who have recently traveled or come into close contact with someone who has been diagnosed with COVID-19, for example, are subjected to a 14-day quarantine.</p>
+                    <p class="qsansp">Self-isolation – refers to a person who has been diagnosed with a communicable disease and is required to isolate oneself from others. COVID-19 is for those who have a stable condition and are not having trouble breathing.</p>
+                    <li id="7" class="qsans" > What are the potential dangers?</li>
+                    <p class="qsansp">COVID-19 problems are more common in persons with weakened immune systems, such as ill people, the elderly, and those who have pre-existing respiratory disorders like COPD or asthma. The infection has the potential to spread to the lungs, resulting in pneumonia and respiratory failure. It's critical that they limit their interaction with anyone who has been exposed to the virus or may get infected. If you have traveled or may have come into touch with the virus in any other way, it is recommended that you avoid physically meeting with members of this sensitive community. If you have a weakened immune system or are elderly, stay out of public places and avoid traveling.</p>
+                    <li id="8" class="qsans" >I'm concerned that I may have COVID-19. So, what do I do now?</li>
+                    <p class="qsansp">If you're worried about your health, use our quick, free, and anonymous tool to determine your COVID-19 risk. Our AI app will ask you a few questions about your symptoms, travel plans, and social interactions, and then walk you through the following stages. Take a look at our <a href="{% url 'checkup' %}" class="qsansa">checkup</a>.</p>
+                    <li id="9" class="qsans" >COVID-19 testing – the good, the bad, and the inconvenient</li>
+                    <p class="qsansp">If you or someone you know is suffering with COVID-19 symptoms, you must first take a self-assessment. These are often brief, accurate online or spoken questionnaires with instant results. If the self-assessment findings indicate that additional testing is necessary, you will most likely be routed to a public assessment center. The tests used to identify the presence of an active virus or antibodies are listed below.</p>
+                    <p class="qsansp"><b>Testing for the presence of an active virus</b> The nasopharyngeal swab is the most prevalent method of COVID-19 testing.</p>
+                    <p class="qsansp">You'll be asked to blow your nose first, then tilt your head back to enable the doctor access to your nasal passageway. To take a sample from the patient's sinuses, the health care practitioner will insert a long, flexible swab, similar to a long cotton tip swab, deep into the patient's nostril. To gather enough material for the test, the swab must be placed far enough and left in place for many seconds. This process is unpleasant, but it has been shown to be quite successful in detecting viral traces.</p>
+                    <p class="qsansp">The swab is subsequently handed up to the authorities or laboratories. You will receive the results between hours to weeks, depending on the company. You will be given a favorable or negative outcome, as well as suggestions for further steps.</p>
+                    <p class="qsansp"><b>Antibody protection testing</b> Commercial COVID-19 antibody tests are now accessible through health care providers and laboratories. Antibodies often form weeks after infection, hence they are not recommended for identifying current infections. As a result, these antibody tests can only tell you if you've had an infection in the past, not if you're now infected.</p>
+                    <p class="qsansp">It is yet uncertain if possessing antibodies to the COVID-19 virus protects you from re-infection.</p>
+                    <li id="10" class="qsans" >Is there a treatment or a vaccination for this disease?</li>
+                    <p class="qsansp">Several nations have approved two COVID-19 vaccines for public use as of December 2021. The Pfizer-BioNTech and Moderna COVID-19 vaccines are the most extensively utilized. Both of these vaccinations come in two doses, which should be given 21 (Pfizer) and 28 (Moderna) days apart. Astra Zeneca, Sputnik V, and Sinovac are some of the other vaccinations that have been licensed across the world.</p>
+                    <p class="qsansp">These vaccinations are considered safe and effective for the general public, with high effectiveness after two doses. They've been subjected to extensive independent scientific studies for safety, efficacy, and quality, and they've been determined to have little to no adverse effects in the general population.</p>
+                    <p class="qsansp">Many nations have devised a phased distribution strategy to prioritize vulnerable people who are most at risk of COVID-19 problems, such as the elderly, and at high risk of exposure and transmission, such as healthcare professionals, because mass manufacture of these vaccines is necessary.</p>
+                    <p class="qsansp">Until immunizations are universally available, we must: <ul><li>Continue to heed local public health recommendations and abide by any limits set by the authorities.</li><li>Take the required health and sanitary measures, such as physical separation, hand washing, and mask use.</li><li>Stay at home and only go out when absolutely necessary.</li></ul></p>
+                    <li id="11" class="qsans" >Variants of COVID-19</li>
+                    <p class="qsansp">COVID-19 virus variants have been discovered and are proliferating over the world. "Omicron" is the most recent variation till December 2021. These variations or strains have been shown to be more effective at infecting populations because of their enhanced transmissibility, or contagiousness. Scientists haven't yet determined if the variations are more lethal or cause more severe consequences, despite the fact that they can spread to a larger number of individuals.</p>
+                    <p class="qsansp">Nonetheless, experts have said that the present Pfizer and Moderna vaccines give adequate protection against these variations, and that they may be improved to cope well with future COVID-19 viral strains.</p>
+                    <p class="qsansp">Due to the greater transmissibility factor of these variations, extra measures should be taken and all public health regulations should be followed to avoid being infected or unwittingly transmitting the virus to others.</p>
+                    <li id="12" class="qsans" >During a pandemic, fear, loneliness, and anxiety are common.</li>
+                    <p class="qsansp">In a crisis, stress and worry are natural emotions. Managing your emotions is crucial to remaining well and keeping others safe at this time.</p>
+                    <p class="qsansp">If you have caught COVID-19 and are alone, secluded, or healing at home, there are numerous things you may do for yourself to help you get through this crisis.</p>
+                    <p class="qsansp">First and foremost, understand that you are not alone. This is something that everyone is dealing with. We'll make it through. Trust the governments and institutions in place to make the best judgments possible and to allocate their resources to containing the epidemic.</p>
+                    <p class="qsansp">It is not required to continually follow the news as far as what you can do is concerned. Make the most of this opportunity. Read, sew, and knit are some of my favorite pastimes. Indoors, perform some gentle exercise. Meditate. Learning a new language is a great way to broaden your horizons. Take a virtual stroll around museum exhibits. Taking your mind off the situation and focusing on yourself can help you stay calm and pass the time.</p>
+                    <p class="qsansp">You can also get reassurance by calling crisis hotlines.</p>
+                    <li id="13" class="qsans" >COVID-19 and Pregnancy</li>
+                    <p class="qsansp">There was no laboratory evidence of viral transfer to the newborn in two instances involving a total of 18 pregnant women with suspected or confirmed COVID-19 pneumonia. There has been no evidence of intrauterine or perinatal transmission.</p>
+                    <p class="qsansp">Pregnant women with suspected COVID-19 are now treated similarly to non-pregnant people in terms of prevention, examination, diagnosis, and therapy.</p>
+                    <p class="qsansp">COVID-19 positive women can breastfeed. They should use a mask for respiratory hygiene, wash their hands before and after contacting the infant, and clean and disinfect surfaces on a regular basis. When you cough or sneeze, you should cover your mouth and nose with your bent elbow or a tissue. Then, dispose of the used tissue as soon as possible.</p>
+                    <li id="14" class="qsans" >Scam warning</li>
+                    <p class="qsansp">Hackers and cyber fraudsters have started taking advantage of the COVID-19 outbreak by sending phony SMS or emails in an effort to fool you into opening files or clicking on dangerous URLs. Be on the lookout for these tactics, since they're most likely being utilized to steal your money or sensitive information.</p>
+
+                </ul>
+
+                <hr class="my-4">
+                <h5>Sources</h5>
+                <div class="source">
+                    <ul>
+                        <li>World Health Organization. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="qsansa">"Coronavirus disease (COVID-19) outbreak"</a>, November 26, 2021</li> 
+                        <li>CDC. <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" class="qsansa">"Coronavirus Disease 2019 (COVID-19)"</a>, November 23, 2021</li>                
+                        <li>ECDC. <a href="https://www.ecdc.europa.eu/en/covid-19/questions-answers" class="qsansa">"Q & A on COVID-19"</a>, November 28, 2021</li>
+                        <li>Up to date. <a href="https://www.uptodate.com/contents/covid-19-epidemiology-virology-and-prevention" class="qsansa">"Coronavirus disease 2019 (COVID-19)"</a>, December 02, 2021</li>
+                        <li>Up to date. <a href="https://www.uptodate.com/contents/coronaviruses" class="qsansa">"Coronaviruses"</a>, December 02, 2021</li>
+                        <li>NHS. <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" class="qsansa">"Coronavirus (COVID-19)"</a>, November 27, 2021</li>
+                    </ul>
+                </div>
+
+                <hr class="my-4">
+                <h5>Authors</h5>
+                <ul class="author">
+                    <span><b>Nazmul Hossain Ananto</b><sup> <a href="{% url 'team' %}">Details</a></sup></span>
+                    <p>ID: 181-15-10642 <br> Department of Computer Science and Engineering <br> Daffodil International University <br> </p>
+                    <span><b>Ishrat Binte Mahfuja</b><sup> <a href="{% url 'team' %}">Details</a></span>
+                    <p>ID: 181-15-10517 <br> Department of Computer Science and Engineering <br> Daffodil International University <br> </p>
+                    <span><b>Sonia Akhter</b><sup> <a href="{% url 'team' %}">Details</a></span>
+                    <p>ID: 181-15-10763 <br> Department of Computer Science and Engineering <br> Daffodil International University <br> </p>
+                    <span><b>Md. Rony Howlader</b><sup> <a href="{% url 'team' %}">Details</a></span>
+                    <p>ID: 181-15-10684 <br> Department of Computer Science and Engineering <br> Daffodil International University <br> </p>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer has-cards">
+        <div class="container">
+            <hr>
+            <div class="row align-items-center justify-content-md-between">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        &copy; 2021 <a href="#" style="text-decoration: none;">Symptominig</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-footer justify-content-end">
+                        <li class="nav-item">
+                            <a href="{% url 'team' %}" class="nav-link">Our Team</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    {% include 'main/partials/scripts.html' %}
+</body>

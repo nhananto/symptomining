@@ -96,6 +96,7 @@
   border: none;
   padding: 7px 14px !important;
   font-size: 16px;
+  font-weight: bold;
   background-color: #dddddd !important;
   color: black !important;
   border-radius: 5px;
@@ -355,7 +356,7 @@ font-weight: 700;
 	margin-top:3rem;
 	margin-bottom: -30px;
 	border-radius: 0.3rem;
-	background-image: url("https://i.ibb.co/tJ4TYVH/ezgif-com-gif-maker.gif");
+	background-image: url("../img/article.gif");
   	background-repeat: no-repeat;
   	background-size: 100% 450px;
 	margin-right: 5%;
@@ -367,30 +368,53 @@ font-weight: 700;
 	font-weight :700;
 	margin-bottom:15px;
 list-style: none;
+}
 
+.qsansp{
+  font-size: 18px;
+  text-align: justify;
+}
+
+.qsansa:link{
+  text-decoration: none;
+  font-size:18px;
 }
 
 .qsid a:link{
 text-decoration: none;
-
 }
+
 .qsid a{
 	font-size:18px;
 	font-weight:600;
 }
+
+.source ul {
+  list-style: none;
+}
+
+.source ul li::before{
+  content: "\2022";
+  color: #0056B3;
+  display: inline-block; 
+  width: 1em;
+  font-weight: bold;
+}
+
 .source li{
-	display: block;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight :600; 
   }
-.author li{
-	
-  display: inline-block;
-  font-size: 20px;
-  padding: 20px;
-  font-weight :600;
 
+.author{
+  font-size: 18px;
+  text-align: center;
 }
+
+.author a:link{
+  text-decoration: none;
+  }
+
 .display-4 {
     font-size: 2.5rem;
     font-weight: 600;
